@@ -9,13 +9,18 @@ import SEO from "./components/SEO";
 function App() {
   return (
     <>
-      <Container>
-        <Navigation />
-        <Home />
-        <Gallery />
-      </Container>
-      <SEO />
-      <Footer />
+      <div
+        className="overflow-x-hidden  mx-auto bg-[#f7f7f7]"
+        style={{ maxWidth: "1440px" }}
+      >
+        <Container>
+          <Navigation />
+          <Home />
+          <Gallery />
+        </Container>
+        <SEO />
+        <Footer />
+      </div>
     </>
   );
 }

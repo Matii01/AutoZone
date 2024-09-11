@@ -18,16 +18,3 @@ function SEO() {
 }
 
 export default SEO;
-
-/*
- <Container>
-    <div className="h-[185px] text-white flex flex-wrap">
-    <div className="basis-full md:basis-1/2 ">
-        <SEOElement />
-    </div>
-    <div className="basis-full md:basis-1/2 ">
-        <SEOElement />
-    </div>
-    </div>
-</Container>
-*/
