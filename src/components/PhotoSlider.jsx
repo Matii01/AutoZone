@@ -45,9 +45,8 @@ const PhotoSlider = () => {
           ))}
         </Swiper>
       </div>
-
-      <div className="w-full pb-20 h-10 mx-auto flex justify-center items-center">
-        <div className="swiper-pagination"></div>
+      <div className="hidden w-full pb-20 h-10 mx-auto md:flex justify-center items-center bg-transparent">
+        <div className=".swiper-pagination"></div>
       </div>
     </div>
   );
