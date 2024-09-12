@@ -1,7 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 function Navigation() {
-  const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
 
@@ -25,43 +24,49 @@ function Navigation() {
   return (
     <>
       <nav
-        ref={ref}
-        className={`py-4 gap-2 z-10 sm:block hidden transition-all duration-300 ease-in-out ${
-          isFixed && "fixed  w-[1320px]"
+        className={`py-4 gap-2 z-10 sm:block hidden mx-auto max-w-[1440px] bg-primary-gray ${
+          isFixed && "fixed top-0 left-0 right-0"
         }`}
-        style={{ backgroundColor: "#f7f7f7" }}
       >
-        <div
-          className="flex justify-between px-4"
-          style={{ maxWidth: "1200px" }}
-        >
+        <div className="flex justify-between px-4 mx-auto max-w-[1200px]">
           <div className="my-auto">
-            <img src="./svg/logo.svg" />
+            <img src="./svg/logo.svg" alt="Company Logo" />
           </div>
-          <div className="w-[144px] gap-6 flex my-auto justify-center z-10 font-robotoflex text-base">
-            <p>Galeria zdjęć</p>
-            <p>FaQ</p>
+          <div className="w-[144px] flex my-auto justify-center font-robotoflex text-base">
+            <ul className="flex gap-4 z-10">
+              <li>
+                <a href="#gallery">Galeria zdjęć</a>
+              </li>
+              <li>
+                <a href="#faq">FAQ</a>
+              </li>
+            </ul>
           </div>
           <div className="gap-2 flex justify-end text-white z-10">
-            <button className="bg-[#0147ff]  w-[158px] h-[47px] rounded-lg text-[15px] font-robotoflex">
+            <button className="bg-primary-blue w-[158px] h-[47px] rounded-lg text-[15px] font-robotoflex">
               Zadzwoń do nas
             </button>
           </div>
         </div>
       </nav>
 
-      <nav className="py-4 gap-2 z-10 sm:hidden">
+      <nav
+        className={`py-4 gap-2 z-10 sm:hidden bg-primary-gray  ${
+          isFixed && "fixed top-0 left-0 right-0"
+        }`}
+      >
         <div className="flex justify-between items-center px-4">
           <div className="my-auto">
             <img
               src="./svg/logo.svg"
-              alt="Logo"
+              alt="Company Logo"
               className="w-[120px] h-auto md:w-[150px]"
             />
           </div>
 
           <div className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             <svg
+              aria-label="Toggle navigation menu"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -81,13 +86,21 @@ function Navigation() {
           <div
             className={`w-full  ${
               isOpen ? "block" : "hidden"
-            } flex flex-col gap-4 mt-4 my-auto z-10 font-robotoflex text-sm`}
+            } flex flex-col gap-4 mt-4 my-auto  font-robotoflex text-sm`}
           >
-            <p className="cursor-pointer text-xl">Galeria zdjęć</p>
-            <p className="cursor-pointer text-xl">FaQ</p>
-            <button className="flex justify-center items-center  py-[12px] w-full sm:w-[148px] bg-[#0147FF] text-[#F7F7F7] font-roboto-flex font-semibold text-[15px] leading-[150%] tracking-[-0.02em] rounded-[8px]">
-              Zadzwoń do nas
-            </button>
+            <ul className="flex flex-col gap-4 text-xl ">
+              <li>
+                <a href="#gallery">Galeria zdjęć</a>
+              </li>
+              <li>
+                <a href="#faq">FAQ</a>
+              </li>
+              <li>
+                <button className="py-[12px] w-full  bg-primary-blue text-primary-gray font-roboto-flex font-semibold text-[15px] leading-[150%] tracking-[-0.02em] rounded-lg ">
+                  Zadzwoń do nas
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </nav>

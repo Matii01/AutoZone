@@ -12,7 +12,16 @@ export default {
       robotoflex: ["Roboto Flex"],
       robotoCondensed: ["Roboto Condensed"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        "primary-blue": "#0147ff",
+        "primary-gray": "#f7f7f7",
+        dark: {
+          100: "#282828",
+          200: "#1D1D1B",
+        },
+      },
+    },
   },
   plugins: [],
 };
