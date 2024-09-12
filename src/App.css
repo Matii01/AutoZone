@@ -1,0 +1,8 @@
+.swiper-pagination-bullet {
+  margin: 0 5px;
+  background-color: #f7f7f7;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0147ff; /* Customize active dot color */
+}

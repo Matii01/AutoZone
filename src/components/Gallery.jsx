@@ -38,8 +38,8 @@ function Gallery() {
             </p>
           </div>
         </div>
-        <PhotoSlider />
       </Container>
+      <PhotoSlider />
     </>
   );
 }
