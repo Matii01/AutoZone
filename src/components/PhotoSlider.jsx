@@ -20,7 +20,7 @@ const PhotoSlider = () => {
           modules={[Pagination]}
           pagination={{
             clickable: true,
-            el: ".swiper-pagination",
+            el: ".swiperPagination",
           }}
           spaceBetween={24}
           breakpoints={{
@@ -45,8 +45,8 @@ const PhotoSlider = () => {
           ))}
         </Swiper>
       </div>
-      <div className="hidden w-full pb-20 h-10 mx-auto md:flex justify-center items-center bg-transparent">
-        <div className=".swiper-pagination"></div>
+      <div className="hidden pb-20 h-10 mx-auto md:flex ">
+        <div className="swiperPagination flex justify-center"></div>
       </div>
     </div>
   );
