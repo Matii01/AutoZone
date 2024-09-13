@@ -13,8 +13,8 @@ function App() {
         <Container>
           <Navigation />
           <Home />
+          <Gallery />
         </Container>
-        <Gallery />
         <SEO />
         <Footer />
       </div>
