@@ -14,7 +14,10 @@ function Gallery() {
   return (
     <>
       <Container>
-        <div className="h-[207px] flex flex-col px-4 xl:px-0 gap-6 pt-20 ">
+        <div
+          id="gallery"
+          className="h-[207px] flex flex-col px-4 xl:px-0 gap-6 pt-20 "
+        >
           <div className="">
             <p className="text-primary-blue text-xl font-robotoCondensed ">
               Prezentacja firmy
@@ -23,7 +26,7 @@ function Gallery() {
               Zobacz naszą Galerię zdjęć
             </p>
           </div>
-          <div className="flex gap-12 font-robotoflex text-[15px]">
+          <div className="flex gap-12 font-robotoflex text-[15px] z-10">
             <p
               className={`${osobowe && selected} cursor-pointer`}
               onClick={() => changeCars(true)}
@@ -39,9 +42,25 @@ function Gallery() {
           </div>
         </div>
       </Container>
-      <PhotoSlider />
+      <PhotoSlider images={osobowe ? images : deliveryCars} />
     </>
   );
 }
 
 export default Gallery;
+
+const images = [
+  "./img/car1.png",
+  "./img/car2.png",
+  "./img/car3.png",
+  "./img/car3.png",
+  "./img/car3.png",
+];
+
+const deliveryCars = [
+  "./img/truck1.jpg",
+  "./img/truck2.jpg",
+  "./img/truck3.jpg",
+  "./img/truck3.jpg",
+  "./img/truck3.jpg",
+];

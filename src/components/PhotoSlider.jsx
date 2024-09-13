@@ -4,15 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
-const PhotoSlider = () => {
-  const images = [
-    "./img/car1.png",
-    "./img/car2.png",
-    "./img/car3.png",
-    "./img/car3.png",
-    "./img/car3.png",
-  ];
-
+function PhotoSlider({ images }) {
   return (
     <div className="w-full max-w-[1200px] mx-auto p-4 xl:p-0">
       <div className="pt-20 pb-10">
@@ -50,6 +42,6 @@ const PhotoSlider = () => {
       </div>
     </div>
   );
-};
+}
 
 export default PhotoSlider;
