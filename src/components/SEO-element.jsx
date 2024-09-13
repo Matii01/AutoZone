@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function SEOElement() {
+  const ref = useRef();
   const [isOpen, setIsOpen] = useState(false);
 
   function toggle() {
@@ -16,9 +17,11 @@ function SEOElement() {
         </p>
         <div className="flex flex-col text-sm gap-6">
           <p
-            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-              !isOpen ? "line-clamp-2" : ""
-            }`}
+            ref={ref}
+            style={{
+              height: isOpen ? `${ref.current?.scrollHeight}px` : "40px",
+            }}
+            className="overflow-hidden transition-[height] duration-500"
           >
             Mauris varius ipsum mauris, rutrum lobortis magna efficitur a. Donec
             egestas, nisl vehicula feugiat ornare, diam turpis efficitur mi, ac
@@ -27,7 +30,6 @@ function SEOElement() {
             fringilla. Nullam ullamcorper arcu sit amet ante tincidunt faucibus.
           </p>
           <div>
-            {/* Toggle button with icon */}
             <button
               className="text-start text-sm flex items-center pb-2 border-b-2 border-solid border-white"
               onClick={toggle}
