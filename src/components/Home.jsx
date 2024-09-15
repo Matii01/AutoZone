@@ -12,33 +12,21 @@ function Home() {
             </div>
           </div>
         </div>
-        {/* <div className="hidden md:block absolute w-[300px] h-[300px] md:w-[668.05px] md:h-[659px] left-[50%] md:left-[700px] top-[-79px] transform -translate-x-[50%] md:translate-x-0 z-0">
-          <div className="absolute left-0 right-[1.35%] top-[10%] bottom-[-1.37%] z-1">
-            <img
-              src="./svg/Subtract.svg"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div> */}
-
         <div className="container flex flex-col justify-center items-start p-0 gap-[48px] w-full max-w-[1200px] z-10">
           <div className="flex flex-col items-start p-0 gap-[32px] w-full max-w-[1200px] z-10">
             <h1 className="text-[40px] sm:text-[50px] md:text-[76.29px] leading-[110%] tracking-[-0.04em] text-dark font-bebas uppercase">
               Sprzedajemy samochody
               <br />z europy
             </h1>
-
             <p className="w-full max-w-[100%] md:max-w-[602px] text-[14px] md:text-[16px] leading-[150%] font-robotoCondensed text-dark">
               Kup komfortowy pojazd, aby każda podróż
               <br /> była wyjątkowym przeżyciem.
             </p>
           </div>
-
           <div className="flex flex-col sm:flex-row items-center gap-[16px] sm:gap-[24px] w-full max-w-[1200px] h-auto z-10">
             <button className="flex justify-center items-center px-[24px] py-[12px] w-full sm:w-[148px] bg-primary-blue text-primary-gray font-roboto-flex font-semibold text-[15px] leading-[150%] tracking-[-0.02em] rounded-[8px]">
               Zobacz zdjęcia
             </button>
-
             <button className="flex justify-center items-center px-[24px] py-[12px] w-full sm:w-[158px] border border-primary-blue text-primary-blue font-roboto-flex font-semibold text-[15px] leading-[150%] tracking-[-0.02em] rounded-[8px]">
               Zadzwoń do nas
             </button>

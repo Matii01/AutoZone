@@ -13,35 +13,33 @@ function Gallery() {
 
   return (
     <>
-      <Container>
-        <div
-          id="gallery"
-          className="h-[207px] flex flex-col px-4 xl:px-0 gap-6 pt-20 "
-        >
-          <div className="">
-            <p className="text-primary-blue text-xl font-robotoCondensed ">
-              Prezentacja firmy
-            </p>
-            <p className="text-4xl font-bebas text-dark-200 ">
-              Zobacz naszą Galerię zdjęć
-            </p>
-          </div>
-          <div className="flex gap-12 font-robotoflex text-[15px] z-10">
-            <p
-              className={`${osobowe && selected} cursor-pointer`}
-              onClick={() => changeCars(true)}
-            >
-              Samochody osobowe
-            </p>
-            <p
-              className={`${!osobowe && selected} cursor-pointer`}
-              onClick={() => changeCars(false)}
-            >
-              Samochody dostawcze
-            </p>
-          </div>
+      <div
+        id="gallery"
+        className="h-[207px] flex flex-col px-4 xl:px-0 gap-6 pt-20 "
+      >
+        <div className="">
+          <p className="text-primary-blue text-xl font-robotoCondensed ">
+            Prezentacja firmy
+          </p>
+          <p className="text-4xl font-bebas text-dark-200 ">
+            Zobacz naszą Galerię zdjęć
+          </p>
         </div>
-      </Container>
+        <div className="flex gap-12 font-robotoflex text-[15px] z-1">
+          <p
+            className={`${osobowe && selected} cursor-pointer`}
+            onClick={() => changeCars(true)}
+          >
+            Samochody osobowe
+          </p>
+          <p
+            className={`${!osobowe && selected} cursor-pointer`}
+            onClick={() => changeCars(false)}
+          >
+            Samochody dostawcze
+          </p>
+        </div>
+      </div>
       <PhotoSlider images={osobowe ? images : deliveryCars} />
     </>
   );

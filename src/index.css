@@ -6,7 +6,6 @@
 @tailwind utilities;
 
 :root {
-  background-color: #f7f7f7;
   background-color: #ffffff;
 }
 
@@ -18,5 +17,3 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
-
-/* Frame 4090 */
